@@ -11,16 +11,6 @@ The pipeline is split into four phases:
 3. **Analytics** - the project measures live occupancy, unique visitors, dwell time, and peak occupancy for every zone.
 4. **Output** - the project exports an annotated video plus CSV and JSON analytics files.
 
-## Setup
-
-The repository is notebook-driven, so the easiest way to run it is in a Python virtual environment.
-
-```bash
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-
 If you are using the included notebooks, run them in order from `notebooks/Phase1.ipynb` through `notebooks/Phase4.ipynb`.
 
 ### Main dependencies
