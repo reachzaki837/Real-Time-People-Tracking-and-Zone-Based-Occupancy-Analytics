@@ -1,0 +1,5 @@
+zone_id,zone_name,unique_visitors,total_entries,avg_dwell_sec,max_dwell_sec,total_dwell_sec,peak_occupancy,peak_timestamp,peak_frame
+0,Entrance,19,22,5.0,13.52,110.04,11,0.72,18
+1,Checkout Area,27,27,4.93,12.44,133.04,14,12.44,311
+2,Aisle,18,22,4.27,13.52,93.84,9,4.56,114
+3,Exit,21,26,2.79,5.6,72.52,8,11.68,292
