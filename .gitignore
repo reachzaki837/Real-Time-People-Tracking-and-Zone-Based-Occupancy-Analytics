@@ -2,4 +2,5 @@
 __pycache__/
 yolov8m.pt
 notebooks/yolov8m.pt
+outputs/videos/
 
