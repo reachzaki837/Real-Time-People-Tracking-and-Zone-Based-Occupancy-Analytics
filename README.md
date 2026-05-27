@@ -23,6 +23,9 @@ If you are using the included notebooks, run them in order from `notebooks/Phase
 - `matplotlib`
 - `scipy`
 
+## Input and Output Videos are stored here:
+[Google Drive link](https://drive.google.com/drive/folders/16dTfGVoT8Mewqpl3i1KBLxIRKOaIcjj7?usp=sharing)
+
 ## Phase 1 - Detection & Tracking
 
 For detection, I used **YOLOv8m** (`notebooks/yolov8m.pt`) and filtered detections to the person class only. For tracking, I used **DeepSORT** so each person keeps the same ID across frames whenever possible.
@@ -118,9 +121,8 @@ The repository includes the main visual outputs below.
 - `outputs/analytics/zone_heatmaps.png` shows zone intensity over the frame.
 - `outputs/analytics/first_frame.png` captures the initial scene used for zone drafting.
 
-The final annotated videos are saved here:
-[Google Drive link](https://drive.google.com/drive/folders/16dTfGVoT8Mewqpl3i1KBLxIRKOaIcjj7?usp=sharing)
-- `inputs/videos/vidp.mp4`
+The final annotated videos are saved as:
+
 - `outputs/videos/final_annotated.mp4`
 - `outputs/videos/phase1_tracked.mp4`
 
