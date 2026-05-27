@@ -119,7 +119,8 @@ The repository includes the main visual outputs below.
 - `outputs/analytics/first_frame.png` captures the initial scene used for zone drafting.
 
 The final annotated videos are saved here:
-
+[Google Drive link](https://drive.google.com/drive/folders/16dTfGVoT8Mewqpl3i1KBLxIRKOaIcjj7?usp=sharing)
+- `inputs/videos/vidp.mp4`
 - `outputs/videos/final_annotated.mp4`
 - `outputs/videos/phase1_tracked.mp4`
 
