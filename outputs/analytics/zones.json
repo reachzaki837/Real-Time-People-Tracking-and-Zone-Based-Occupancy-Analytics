@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "name": "Entrance",
+    "name": "Left Storefront",
     "color": [
       255,
       100,
@@ -28,7 +28,7 @@
   },
   {
     "id": 1,
-    "name": "Checkout Area",
+    "name": "Right Building Frontage",
     "color": [
       50,
       255,
@@ -55,7 +55,7 @@
   },
   {
     "id": 2,
-    "name": "Aisle",
+    "name": "Near-Left Walkway",
     "color": [
       50,
       150,
@@ -82,7 +82,7 @@
   },
   {
     "id": 3,
-    "name": "Exit",
+    "name": "Near-Right Walkway",
     "color": [
       200,
       50,

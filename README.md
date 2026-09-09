@@ -4,7 +4,9 @@ This project tracks people in a video with YOLOv8 and DeepSORT, assigns each tra
 
 ## What the project does
 
-The pipeline is split into four phases:
+The pipeline is split into four phases. Its default input is the static-camera
+`MOT17-02-FRCNN` sequence, selected for clear, scene-specific occupancy zones;
+`MOT17-04-FRCNN` is included as an optional high-density stress test.
 
 1. **Detection & Tracking** - YOLOv8 detects people and DeepSORT keeps persistent track IDs across frames.
 2. **Zone Definition** - four meaningful zones are drawn on the frame and named according to the scene.
@@ -25,6 +27,35 @@ If you are using the included notebooks, run them in order from `notebooks/Phase
 
 ## Input and Output Videos are stored here:
 [Google Drive link](https://drive.google.com/drive/folders/16dTfGVoT8Mewqpl3i1KBLxIRKOaIcjj7?usp=sharing)
+
+## Using the MOT17 dataset
+
+MOT17 is distributed as numbered JPEG frames, but MOTChallenge also provides
+raw MP4 exports for each sequence. This workspace is configured to use the
+downloaded `MOT17-02-FRCNN` video by default, with `MOT17-04-FRCNN` available
+as the high-density stress test. Both are saved in `data/MOT17/videos/`.
+The raw MP4 exports are 960x540, whereas the corresponding MOT17 annotations
+use 1920x1080 coordinates; scale ground-truth bounding boxes by `0.5` on each
+axis before evaluating predictions generated from these MP4 files.
+
+If you have extracted the full training archive, the converter remains useful
+for other sequences:
+
+```powershell
+python scripts/mot17_to_video.py `
+  --sequence-dir data/MOT17/train/MOT17-04-FRCNN `
+  --output vidp.mp4
+```
+
+The conversion preserves the sequence's frame rate from `seqinfo.ini`, so the
+dwell-time and occupancy timestamps remain meaningful. To switch the notebooks
+to the saved high-density video, set `INPUT_VIDEO_PATH` to
+`../data/MOT17/videos/MOT17-04-FRCNN.mp4` before running Phase 1 and Phase 4.
+
+MOT17 does not define business areas such as entrance or checkout zones. Run
+Phase 2 again and redraw the four polygons for the selected camera view; do not
+reuse the zone coordinates saved for the original video. The MOT17 data itself
+is ignored by Git (`data/MOT17/`) to avoid committing the large dataset.
 
 ## Phase 1 - Detection & Tracking
 
@@ -50,10 +81,10 @@ The run produced **66 unique track IDs** and an estimated **29 ID switches** in 
 
 I defined four zones directly on the first frame and gave them names that match the visual layout of the footage:
 
-- **Zone 0: Entrance**
-- **Zone 1: Checkout Area**
-- **Zone 2: Aisle**
-- **Zone 3: Exit**
+- **Zone 0: Left Storefront**
+- **Zone 1: Right Building Frontage**
+- **Zone 2: Near-Left Walkway**
+- **Zone 3: Near-Right Walkway**
 
 Zone membership is determined from the tracked person's **bottom-center point**, which is a better proxy for where the person is standing than the center of the bounding box.
 

@@ -1,5 +1,5 @@
 zone_id,zone_name,unique_visitors,total_entries,avg_dwell_sec,max_dwell_sec,total_dwell_sec,peak_occupancy,peak_timestamp,peak_frame
-0,Entrance,21,23,5.41,13.52,124.44,12,0.4,10
-1,Checkout Area,25,26,5.07,12.44,131.72,13,12.44,311
-2,Aisle,19,19,5.39,13.52,102.44,10,4.88,122
-3,Exit,20,20,3.2,5.48,63.92,8,11.4,285
+0,Left Storefront,51,52,4.32,19.9,224.7,15,15.9,477
+1,Right Building Frontage,0,0,0.0,0.0,0.0,1,1.767,53
+2,Near-Left Walkway,0,0,0.0,0.0,0.0,1,17.433,523
+3,Near-Right Walkway,0,0,0.0,0.0,0.0,0,,
