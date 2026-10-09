@@ -4,4 +4,7 @@ yolov8m.pt
 notebooks/yolov8m.pt
 outputs/videos/
 vidp.mp4
-data/MOT17/
+data/
+mot_eval_env/
+notebooks/yolov8l.pt
+.pytest_cache
